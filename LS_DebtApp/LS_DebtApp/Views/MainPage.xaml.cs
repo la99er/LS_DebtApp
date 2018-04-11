@@ -20,8 +20,8 @@ namespace LS_DebtApp.Views
 		{
             DebtEntries = new ObservableCollection<DebtEntry>()
             {
-                new DebtEntry { Name = "Lars" },
-                new DebtEntry { Name = "Lea" }
+                new DebtEntry { Name = "Lars" , Amount=10, Date=DateTime.Now, Reason="Hahahha"},
+                new DebtEntry { Name = "Lea" , Amount=-10, Date=DateTime.Now, Reason="Some Reason"},
             };
 
             InitializeComponent ();
