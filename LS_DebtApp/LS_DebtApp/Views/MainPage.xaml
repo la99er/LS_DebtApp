@@ -8,4 +8,56 @@
         <ToolbarItem Icon="{x:Static const:Constants.AddIcon}" Text="Add" Order="Primary" />
         <ToolbarItem Icon="{x:Static const:Constants.SettingsIcon}" Text="Settings" Order="Secondary" />
     </ContentPage.ToolbarItems>
+    <StackLayout Spacing="0">
+        <StackLayout Orientation="Horizontal"
+                     Padding="6">
+            <Label Text="Sortieren nach:" />
+            <Label Text="Name " />
+            <Image />
+            <Label Text="Total: 30€"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <BoxView HeightRequest="1" BackgroundColor="Gray" />
+        <ListView ItemsSource="{Binding DebtEntries}" x:Name="MyList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="0">
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="6">
+                                <Label Text="{Binding Name}" 
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="schuldet dir "
+                                       FontSize="12"
+                                       HorizontalOptions="End"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="4 €"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="End" 
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="6, 0, 6, 6">
+                                <Label Text="Some Reason"
+                                       FontSize="14"
+                                       TextColor="Gray"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalTextAlignment="Center" />
+                                <Label Text="11. April" 
+                                       FontSize="14"
+                                       HorizontalOptions="End" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
