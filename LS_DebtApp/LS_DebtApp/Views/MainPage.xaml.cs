@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace LS_DebtApp
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace LS_DebtApp.Views
 {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
+		public MainPage ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
 	}
 }

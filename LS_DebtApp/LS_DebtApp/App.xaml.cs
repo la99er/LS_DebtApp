@@ -13,7 +13,11 @@ namespace LS_DebtApp
 		{
 			InitializeComponent();
 
-			MainPage = new LS_DebtApp.MainPage();
+            MainPage = new NavigationPage(new Views.MainPage())
+            {
+                BarBackgroundColor = Color.Green,
+                BarTextColor = Color.White
+            };
 		}
 
 		protected override void OnStart ()
