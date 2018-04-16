@@ -20,7 +20,8 @@
                    HorizontalOptions="EndAndExpand"/>
         </StackLayout>
         <BoxView HeightRequest="1" BackgroundColor="Gray" />
-        <ListView ItemsSource="{Binding DebtEntries}" x:Name="MyList">
+        <ListView ItemsSource="{Binding DebtEntries}" x:Name="MyList"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -36,24 +37,27 @@
                                        FontSize="12"
                                        HorizontalOptions="End"
                                        VerticalTextAlignment="Center"/>
-                                <Label Text="4 €"
+                                <Label Text="{Binding Amount}"
                                        FontSize="16"
                                        FontAttributes="Bold"
                                        HorizontalOptions="End" 
                                        VerticalTextAlignment="Center"/>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="EndAndExpand"
                                          Padding="6, 0, 6, 6">
-                                <Label Text="Some Reason"
+                                <Label Text="{Binding Reason}"
                                        FontSize="14"
                                        TextColor="Gray"
                                        HorizontalOptions="FillAndExpand"
                                        VerticalTextAlignment="Center" />
-                                <Label Text="11. April" 
+                                <Label Text="{Binding Date, StringFormat='{0:dd MMMM}'}"
                                        FontSize="14"
                                        HorizontalOptions="End" VerticalTextAlignment="Center"/>
                             </StackLayout>
-                            <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                            <BoxView HeightRequest="1" 
+                                     BackgroundColor="Gray"
+                                     VerticalOptions="End"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
