@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:LS_DebtApp.MarkupExtensions"
+             x:Class="LS_DebtApp.Views.InfoPage">
+    <StackLayout Padding="10">
+        <Label Text="Info"
+               FontSize="Medium"/>
+        <Label Text="Die Schulden-App erlaubt es dir, alle deine Schulden kurz und einfach zu notieren, damit du keine offenen Schulden mehr vergisst." />
+        <Label Text="Copyright © Lars Nitzke 2018" />
+        <Label Text="App Version"
+               FontSize="Medium"/>
+        <Label Text="1.1.10.0"/>
+        <Label Text="Falls du irgendwelche Verbesserungsvorschläge oder Probleme mit der App hast, zögere nicht mich zu kontaktieren." />
+        <Button Text="Kontaktiere mich"
+                HorizontalOptions="Start"
+                WidthRequest="200" />
+        <Button Text="Bewerte diese App"
+                HorizontalOptions="Start"
+                WidthRequest="200" />
+        <Image Source="{extensions:ImageResourceExtension LS_DebtApp.Images.logo_big.png}" 
+               Aspect="AspectFit"
+               HorizontalOptions="Start"
+               HeightRequest="150"/>
+    </StackLayout>
+</ContentPage>

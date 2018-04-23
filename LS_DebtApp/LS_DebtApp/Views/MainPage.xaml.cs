@@ -28,5 +28,11 @@ namespace LS_DebtApp.Views
 
             MyList.ItemsSource = DebtEntries;
 		}
-	}
+
+        private void OnInfoItemClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new InfoPage());
+        }
+
+    }
 }

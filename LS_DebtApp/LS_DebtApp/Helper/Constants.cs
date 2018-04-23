@@ -9,7 +9,7 @@ namespace LS_DebtApp.Helper
     {
         public static readonly string AddIcon;
         public static readonly string SettingsIcon;
-
+        public static readonly string InfoIcon;
         public static readonly string AcceptIcon;
         public static readonly string CancelIcon;
         public static readonly string ContactsIcon;
@@ -46,7 +46,7 @@ namespace LS_DebtApp.Helper
 
             AddIcon = prePath + "ic_add.png";
             SettingsIcon = prePath + "ic_settings.png";
-
+            InfoIcon = prePath + "ic_info.png";
             AcceptIcon = prePath + "accept_icon.png";
             CancelIcon = prePath + "cancel_icon.png";
             ContactsIcon = prePath + "contacts_icon.png";

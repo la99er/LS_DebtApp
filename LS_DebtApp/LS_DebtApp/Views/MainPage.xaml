@@ -7,6 +7,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="{x:Static const:Constants.AddIcon}" Text="Add" Order="Primary" />
         <ToolbarItem Icon="{x:Static const:Constants.SettingsIcon}" Text="Settings" Order="Secondary" />
+        <ToolbarItem Icon="{x:Static const:Constants.InfoIcon}" Text="Info" Order="Secondary" Clicked="OnInfoItemClicked" />
     </ContentPage.ToolbarItems>
     <StackLayout Spacing="0">
         <StackLayout Orientation="Horizontal"
